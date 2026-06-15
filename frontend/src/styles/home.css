@@ -1,0 +1,120 @@
+/* Container principal */
+.container {
+  /* Altura mínima da tela */
+  min-height: 100vh;
+  /* Flexbox */
+  display: flex;
+  /* Elementos em coluna */
+  flex-direction: column;
+  /* Centraliza verticalmente */
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza textos */
+  text-align: center;
+  /* Espaçamento interno */
+  padding: 40px;
+  /* Fundo com imagem e camada branca transparente */
+  background:
+  linear-gradient(
+    rgba(255,255,255,0.35),
+    rgba(255,255,255,0.35)
+  ),
+  url("https://images.vexels.com/media/users/3/315263/raw/ca83aec633aca5b3845da0aaa3c6822e-fundo-infantil-de-animais-fofos.jpg");
+  /* Faz imagem ocupar toda área */
+  background-size: cover;
+  /* Centraliza imagem */
+  background-position: center;
+}
+
+/* Título principal */
+.container h1 {
+  /* Tamanho da fonte */
+  font-size: 48px;
+  /* Cor verde */
+  color: #1b5e20;
+  /* Espaço abaixo */
+  margin-bottom: 15px;
+}
+
+/* Texto abaixo do título */
+.container p {
+  /* Tamanho da fonte */
+  font-size: 18px;
+  /* Cor verde */
+  color: #2e7d32;
+  /* Espaço abaixo */
+  margin-bottom: 35px;
+  /* Negrito */
+  font-weight: bold;
+}
+
+/* Área dos botões */
+.botoes {
+  /* Botões lado a lado */
+  display: flex;
+  /* Espaço entre eles */
+  gap: 20px;
+  /* Quebra linha se necessário */
+  flex-wrap: wrap;
+  /* Centraliza */
+  justify-content: center;
+}
+
+/* Botões */
+.botao {
+  /* Fundo verde */
+  background: #3c8340;
+  /* Texto branco */
+  color: white;
+  /* Espaçamento interno */
+  padding: 15px 28px;
+  /* Remove sublinhado */
+  text-decoration: none;
+  /* Bordas arredondadas */
+  border-radius: 30px;
+  /* Tamanho da fonte */
+  font-size: 16px;
+  /* Negrito */
+  font-weight: bold;
+}
+
+/* BOTÃO SAIR */
+
+.logout-btn{
+  /* Fixa no canto superior direito */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  background: #c62828;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hover */
+.logout-btn:hover{
+  background: #b71c1c;
+}
+
+/* Responsividade */
+@media(max-width:768px){
+  .container h1{
+    font-size: 36px;
+  }
+  .container p{
+    font-size: 16px;
+  }
+  .botoes{
+    /* Botões um abaixo do outro no celular */
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+  }
+  .botao{
+    text-align: center;
+  }
+}

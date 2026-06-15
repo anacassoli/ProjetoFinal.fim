@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Faz HTML, BODY e ROOT ocuparem a tela toda */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Estilo geral da página */
+body {
+  /* Fonte padrão */
+  font-family: Arial, sans-serif;
+  /* Cor de fundo verde */
+  background-color: #548458;
+}
+
+/* Área principal do login */
+main {
+  /* Ocupa toda a largura */
+  width: 100%;
+  /* Ocupa toda a altura da tela */
+  min-height: 100vh;
+  /* Ativa Flexbox */
+  display: flex;
+  /* Centraliza horizontalmente */
+  justify-content: center;
+  /* Centraliza verticalmente */
+  align-items: center;
+}
+
+/* Card do login */
+.panel {
+  /* Largura total disponível */
+  width: 100%;
+  /* Limita largura máxima */
+  max-width: 400px;
+  /* Fundo branco */
+  background: white;
+  /* Espaçamento interno */
+  padding: 30px;
+  /* Bordas arredondadas */
+  border-radius: 12px;
+  /* Sombra do card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Título Login */
+.login-panel h2 {
+  /* Centraliza texto */
+  text-align: center;
+  /* Cor verde */
+  color: #2e7d32;
+  /* Espaço abaixo */
+  margin-bottom: 25px;
+}
+
+/* Mensagem de erro */
+.message {
+  /* Texto vermelho */
+  color: red;
+  /* Centraliza texto */
+  text-align: center;
+  /* Espaço abaixo */
+  margin-bottom: 15px;
+}
+
+/* Cada grupo do formulário */
+.form-row {
+  /* Organiza elementos em coluna */
+  display: flex;
+  flex-direction: column;
+  /* Espaço entre os campos */
+  margin-bottom: 15px;
+}
+
+/* Texto do label */
+.form-row label {
+  /* Espaço abaixo */
+  margin-bottom: 5px;
+  /* Verde escuro */
+  color: #1b5e20;
+  /* Negrito */
+  font-weight: bold;
+}
+
+/* Campos de entrada */
+.form-row input {
+  /* Espaçamento interno */
+  padding: 12px;
+  /* Borda verde */
+  border: 1px solid #619563;
+  /* Cantos arredondados */
+  border-radius: 8px;
+  /* Tamanho da fonte */
+  font-size: 14px;
+}
+
+/* Quando o input recebe foco */
+.form-row input:focus {
+  /* Remove borda azul padrão */
+  outline: none;
+  /* Deixa borda verde */
+  border-color: #43a047;
+}
+
+/* Botão entrar */
+.button-row button {
+  /* Ocupa toda largura */
+  width: 100%;
+  /* Espaçamento interno */
+  padding: 12px;
+  /* Cor verde */
+  background-color: #43a047;
+  /* Texto branco */
+  color: white;
+  /* Remove borda */
+  border: none;
+  /* Bordas arredondadas */
+  border-radius: 8px;
+  /* Tamanho da fonte */
+  font-size: 15px;
+  /* Mãozinha ao passar mouse */
+  cursor: pointer;
+}
+
+/* Efeito hover */
+.button-row button:hover {
+  /* Verde mais escuro */
+  background-color: #2e7d32;
+}

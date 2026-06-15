@@ -1,0 +1,235 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fundo geral da página */
+body{
+  background:#104d20;
+}
+
+/*CONTEÚDO PRINCIPAL*/
+
+.conteudo{
+  /* Ocupa pelo menos toda a altura da tela */
+  min-height:100vh;
+  /* Espaçamento interno */
+  padding:40px 20px;
+  /* Centraliza os textos */
+  text-align:center;
+  /* Texto branco */
+  color:white;
+}
+
+/* Título principal */
+.conteudo h1{
+  /* Tamanho grande */
+  font-size:42px;
+  /* Espaço abaixo */
+  margin-bottom:30px;
+}
+
+/*BOTÕES DE NAVEGAÇÃO*/
+
+.nav-buttons{
+  /* Botões lado a lado */
+  display:flex;
+  /* Centraliza horizontalmente */
+  justify-content:center;
+  /* Espaço entre os botões */
+  gap:15px;
+  /* Espaço abaixo */
+  margin-bottom:25px;
+  /* Quebra linha se faltar espaço */
+  flex-wrap:wrap;
+}
+
+/* Remove sublinhado dos links */
+.nav-buttons a{
+  text-decoration:none;
+}
+
+/* Botões de navegação */
+.nav-buttons button{
+  /* Largura mínima */
+  min-width:120px;
+  /* Espaçamento interno */
+  padding:12px 20px;
+  /* Remove borda */
+  border:none;
+  /* Bordas arredondadas */
+  border-radius:8px;
+  /* Mãozinha ao passar o mouse */
+  cursor:pointer;
+  /* Fundo verde claro */
+  background:#b9dfc8;
+  /* Texto verde */
+  color:#1f7a37;
+  /* Negrito */
+  font-weight:bold;
+  /* Animação suave */
+  transition:0.3s;
+}
+
+/* Hover */
+.nav-buttons button:hover{
+  /* Fundo verde escuro */
+  background:#4fa36b;
+  /* Texto branco */
+  color:white;
+}
+
+/*ÁREA DE BUSCA*/
+
+.form-row{
+  /* Elementos lado a lado */
+  display:flex;
+  /* Centraliza */
+  justify-content:center;
+  /* Espaço entre os elementos */
+  gap:15px;
+  /* Espaço abaixo */
+  margin-bottom:30px;
+  /* Permite quebrar linha */
+  flex-wrap:wrap;
+}
+
+/* Campo de busca */
+.form-row input{
+  /* Largura fixa */
+  width:300px;
+  /* Espaçamento interno */
+  padding:12px;
+  /* Remove borda */
+  border:none;
+  /* Cantos arredondados */
+  border-radius:8px;
+  /* Remove borda azul padrão */
+  outline:none;
+}
+
+/* Botões da busca */
+.form-row button{
+  /* Espaçamento interno */
+  padding:12px 20px;
+  /* Remove borda */
+  border:none;
+  /* Bordas arredondadas */
+  border-radius:8px;
+  /* Mãozinha */
+  cursor:pointer;
+  /* Cor de fundo */
+  background:#b9dfc8;
+  /* Cor do texto */
+  color:#1f7a37;
+  /* Negrito */
+  font-weight:bold;
+  /* Animação */
+  transition:0.3s;
+}
+
+/* Hover */
+.form-row button:hover{
+  /* Fundo verde */
+  background:#4fa36b;
+  /* Texto branco */
+  color:white;
+}
+
+/*TABELA*/
+
+table{
+  /* Ocupa quase toda a tela */
+  width:95%;
+  /* Centraliza */
+  margin:auto;
+  /* Remove espaços entre células */
+  border-collapse:collapse;
+  /* Fundo branco */
+  background:white;
+  /* Texto preto */
+  color:black;
+  /* Bordas arredondadas */
+  border-radius:10px;
+  /* Faz o radius funcionar */
+  overflow:hidden;
+  /* Sombra */
+  box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Cabeçalho */
+th{
+  /* Fundo verde */
+  background:#1f7a37;
+  /* Texto branco */
+  color:white;
+  /* Espaçamento interno */
+  padding:14px;
+}
+
+/* Células */
+td{
+  /* Espaçamento interno */
+  padding:12px;
+  /* Borda */
+  border:1px solid #ddd;
+  /* Texto alinhado à esquerda */
+  text-align:left;
+  /* Alinha conteúdo no topo */
+  vertical-align:top;
+}
+
+/* Linhas pares */
+tr:nth-child(even){
+  /* Cinza claro */
+  background:#f5f5f5;
+}
+
+/* Hover da linha */
+tr:hover{
+  /* Verde clarinho */
+  background:#e8f5e9;
+}
+
+/*COLUNAS GRANDES*/
+
+/* Pergunta, resposta e comentário */
+td:nth-child(4),
+td:nth-child(5),
+td:nth-child(6){
+  /* Largura máxima */
+  max-width:350px;
+  /* Permite quebra de linha */
+  white-space:pre-wrap;
+}
+
+/*LINKS */
+
+.form-row a{
+  text-decoration:none;
+}
+.form-row a button{
+  /* Tamanho mínimo */
+  min-width:120px;
+}
+
+/* RESPONSIVIDADE*/
+
+@media(max-width:900px){
+  /* Diminui o título */
+  .conteudo h1{
+    font-size:30px;
+  }
+  /* Input e botões ficam em coluna */
+  .form-row{
+    flex-direction:column;
+    align-items:center;
+  }
+  /* Permite rolar a tabela */
+  table{
+    display:block;
+    overflow-x:auto;
+  }
+}
