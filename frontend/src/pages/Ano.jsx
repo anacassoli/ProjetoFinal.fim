@@ -5,12 +5,12 @@ import "../styles/enunciados.css";
 
 export default function Ano() {
 
-      useEffect(() => {
+      useEffect(() => { //serve para executar um código automaticamente.
 
-    const token = localStorage.getItem("jwtToken");
+    const token = localStorage.getItem("jwtToken"); // Busca o token JWT salvo no navegador após o login
 
-    if (!token) {
-      window.location.href = "/";
+    if (!token) { // se não existir token, o usuário não fez logout ou não tem autenticação
+      window.location.href = "/"; // redireciona para a página de login
     }
 
   }, []);
