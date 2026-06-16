@@ -5,6 +5,16 @@ import "../styles/enunciados.css";
 
 export default function Tema() {
 
+useEffect(() => {
+
+    const token = localStorage.getItem("jwtToken");
+
+    if (!token) {
+      window.location.href = "/";
+    }
+
+  }, []);
+
   /*ESTADOS*/
   // Guarda as questões vindas do backend
   const [data, setData] = useState([]);

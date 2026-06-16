@@ -5,6 +5,17 @@ import "../styles/enunciados.css";
 
 export default function Ano() {
 
+      useEffect(() => {
+
+    const token = localStorage.getItem("jwtToken");
+
+    if (!token) {
+      window.location.href = "/";
+    }
+
+  }, []);
+
+
 // guarda os dados das questões
 const [data, setData] = useState([]);
 

@@ -1,6 +1,17 @@
 import "../styles/home.css";
+import { useEffect } from "react";
 
 export default function Home() {
+
+  useEffect(() => {
+
+    const token = localStorage.getItem("jwtToken");
+
+    if (!token) {
+      window.location.href = "/";
+    }
+
+  }, []);
 
 // função de logout (sair do sistema)
 function logout() {

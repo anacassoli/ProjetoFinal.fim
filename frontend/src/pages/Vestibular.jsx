@@ -6,11 +6,18 @@ import { getAll, getByVestibular } from "../services/api";
 import Tabela from "../components/Tabela";
 import "../styles/enunciados.css";
 
-
 /*PÁGINA: VESTIBULAR*/
 export default function Vestibular() {
 
+  useEffect(() => {
 
+    const token = localStorage.getItem("jwtToken");
+
+    if (!token) {
+      window.location.href = "/";
+    }
+
+  }, []);
 /*ESTADOS*/
   // Armazena as questões vindas do backend
   const [data, setData] = useState([]);
