@@ -4,43 +4,59 @@ import Tabela from "../components/Tabela";
 import "../styles/enunciados.css";
 
 export default function Ano() {
-  const [data, setData] = useState([]);
-  const [search, setSearch] = useState("");
 
-  async function loadAll() {
-    setData(await getAll());
-  }
+// guarda os dados das questões
+const [data, setData] = useState([]);
 
-  async function searchAno() {
-    if (!search) return loadAll();
-    setData(await getByAno(search));
-  }
+// guarda o valor digitado no input
+const [search, setSearch] = useState("");
 
-  useEffect(() => {
-    loadAll();
-  }, []);
+// busca todas as questões no backend
+async function loadAll() {
+setData(await getAll());
+}
 
-  return (
-    <div className="conteudo">
-      <h1>Questões por Ano</h1>
+// busca questões filtrando pelo ano
+async function searchAno() {
+if (!search) return loadAll();
+setData(await getByAno(search));
+}
 
-      <div className="nav-buttons">
-        <a href="/home"><button>Home</button></a>
-        <a href="/tema"><button>Tema</button></a>
-        <a href="/vestibular"><button>Vestibular</button></a>
-      </div>
+// executa quando a página abre
+useEffect(() => {
+loadAll();
+}, []);
 
-      <div className="form-row">
-        <input
-          placeholder="Digite o ano..."
-          onChange={(e) => setSearch(e.target.value)}
-        />
+return (
+<div className="conteudo">
+{/* título da página */}
+<h1>Questões por Ano</h1>
 
-        <button onClick={searchAno}>Buscar</button>
-        <button onClick={loadAll}>Mostrar Todas</button>
-      </div>
+{/* navegação entre páginas */}
+<div className="nav-buttons">
+<a href="/home"><button>Home</button></a>
+<a href="/tema"><button>Tema</button></a>
+<a href="/vestibular"><button>Vestibular</button></a>
+</div>
 
-      <Tabela data={data} />
-    </div>
-  );
+{/* área de busca */}
+<div className="form-row">
+
+{/* input do ano */}
+<input
+placeholder="Digite o ano..."
+onChange={(e) => setSearch(e.target.value)}
+/>
+
+{/* botão buscar por ano */}
+<button onClick={searchAno}>Buscar</button>
+
+{/* botão mostrar tudo */}
+
+<button onClick={loadAll}>Mostrar Todas</button>
+</div>
+{/* tabela que mostra os dados */}
+<Tabela data={data} />
+</div>
+);
 }

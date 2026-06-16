@@ -2,38 +2,48 @@ import "../styles/home.css";
 
 export default function Home() {
 
-  function logout() {
-    localStorage.removeItem("jwtToken");
-    window.location.href = "/";
-  }
+// função de logout (sair do sistema)
+function logout() {
+// remove o token de autenticação do navegador
+localStorage.removeItem("jwtToken");
 
-  return (
-    <div className="container">
+// redireciona para a página de login
+window.location.href = "/";
+}
 
-      <button className="logout-btn" onClick={logout}>
-        Sair
-      </button>
+return (
+<div className="container">
 
-      <h1>BioVest</h1>
+{/* botão de sair */}
+<button className="logout-btn" onClick={logout}>
+Sair
+</button>
 
-      <p>
-        Sistema de Questões de Biologia para Vestibulares
-      </p>
+{/* título do sistema */}
+<h1>BioVest</h1>
 
-      <div className="botoes">
-        <a href="/tema" className="botao">
-          Temas
-        </a>
+{/* descrição do sistema */}
+<p>Sistema de Questões de Biologia para Vestibulares</p>
 
-        <a href="/ano" className="botao">
-          Anos
-        </a>
+{/* botões de navegação */}
+<div className="botoes">
 
-        <a href="/vestibular" className="botao">
-          Vestibulares
-        </a>
-      </div>
+{/* página de temas */}
+<a href="/tema" className="botao">
+Temas
+</a>
 
-    </div>
-  );
+{/* página de anos */}
+<a href="/ano" className="botao">
+Anos
+</a>
+
+{/* página de vestibulares */}
+<a href="/vestibular" className="botao">
+Vestibulares
+</a>
+
+</div>
+</div>
+);
 }
