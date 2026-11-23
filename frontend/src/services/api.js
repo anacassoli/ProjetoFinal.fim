@@ -2,7 +2,7 @@
 
 //Endereço do backend
 //Todas as requisições serão feitas a partir dessa URL
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://projeto-final-fim-vdtx-i3g9zmkcw-ana-clara6.vercel.app";
 
 
 /*LOGIN*/
