@@ -55,13 +55,9 @@ app.use("/vestibular", questoesRoutes);
 // Quando o usuário acessa "/"
 // o servidor devolve a página de login
 app.get("/", (req, res) => {
-res.sendFile(
-path.join(
-__dirname,
-"public",
-"login.html"
-)
-);
+  res.status(200).json({
+    mensagem: "API BioVest funcionando!"
+  });
 });
 
 
