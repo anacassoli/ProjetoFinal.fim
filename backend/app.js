@@ -19,8 +19,8 @@ require("./db");
 const authRoutes = require("./src/routes/authRoutes");
 const questoesRoutes = require("./src/routes/questoesRoutes");
 
-app.use("/auth", authRoutes);
-app.use("/vestibular", questoesRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/vestibular", questoesRoutes);
 
 app.get("/", (req, res) => {
   res.status(200).json({
