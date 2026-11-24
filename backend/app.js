@@ -15,7 +15,7 @@ app.use(
     path.join(__dirname, "public")
   )
 );
-require("./src/config/db");
+require("./src/config/database");
 const authRoutes = require("./src/routes/authRoutes");
 const questoesRoutes = require("./src/routes/questoesRoutes");
 
